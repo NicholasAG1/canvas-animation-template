@@ -10,11 +10,12 @@ cnv.height = 600
 let colorNames = ["red", "green", "blue", "orange", "magenta", "purple"]
 
 // Parallel Arays to store Buble Data
+let bals = Math.randomInt(50, 5000)
 let xVals = [];
 let yVals = [];
 let rVals = [];
 let colorVals = [];
-for (let n = 0; n < 5000; n++) {
+for (let n = 0; n < bals; n++) {
     xVals.push(Math.randomDec(0, cnv.width));
     yVals.push(Math.randomDec(0, cnv.height));
     rVals.push(Math.randomDec(10, 40))
