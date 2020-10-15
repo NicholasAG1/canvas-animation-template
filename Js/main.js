@@ -10,12 +10,12 @@ cnv.height = 600
 let colorNames = ["red", "green", "blue", "orange", "magenta", "purple"]
 
 // Parallel Arays to store Buble Data
-let bals = Math.randomInt(50, 5000)
+let randomBals = Math.randomInt(50, 500)
 let xVals = [];
 let yVals = [];
 let rVals = [];
 let colorVals = [];
-for (let n = 0; n < bals; n++) {
+for (let n = 0; n < randomBals; n++) {
     xVals.push(Math.randomDec(0, cnv.width));
     yVals.push(Math.randomDec(0, cnv.height));
     rVals.push(Math.randomDec(10, 40))
@@ -36,7 +36,7 @@ function draw() {
         xVals[i] += Math.randomDec(-5, 5)
         yVals[i] += Math.randomDec(-5, 5)
         // Set Color for Bubble
-        ctx.strokeStyle = colorNames[i]
+        ctx.strokeStyle = colorVals[i]
         // Draw Bubble
         strokeCircle(xVals[i], yVals[i], rVals[i]);
     }
